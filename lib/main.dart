@@ -88,8 +88,10 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             const SizedBox(height: 20),
             FadeTransition(
               opacity: _animation,
-              child: Image.asset(
-                _showFirstImage ? 'assets/dog.png' : 'assets/cat.png',
+              child: Image.network(
+                _showFirstImage
+                    ? 'https://cdn.outsideonline.com/wp-content/uploads/2023/03/Funny_Dog_H.jpg?crop=16:9&width=960&enable=upscale&quality=100'
+                    : 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/440px-Juvenile_Ragdoll.jpg',
                 width: 200,
                 height: 200,
               ),
